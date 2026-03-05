@@ -183,12 +183,11 @@ section ol li {
 .pub-list {
   list-style: none;
   padding-left: 0;
-  counter-reset: none;
 }
 
 .pub-list li {
   position: relative;
-  padding: 8px 12px;
+  padding: 8px 12px 8px 42px;
   margin-bottom: 4px;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -201,10 +200,11 @@ section ol li {
 }
 
 .pub-list li::before {
-  content: "[" attr(value) "]";
+  content: "[" attr(data-index) "]";
+  position: absolute;
+  left: 8px;
   font-weight: 700;
   color: #2563eb;
-  margin-right: 6px;
 }
 
 .pub-list li em {
